@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "../replace.py", line 22, in ?
+    new_file = open(sys.argv[4],'w')
+IndexError: list index out of range
+sframe_main: /usr/lib64/libxml2.so.2: no version information available (required by /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libXMLParser.so)
+I/O warning : failed to load external entity "temp.xml"

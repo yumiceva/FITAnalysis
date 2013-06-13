@@ -1,0 +1,44 @@
+sframe_main: /usr/lib64/libxml2.so.2: no version information available (required by /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libXMLParser.so)
+/uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/bin/sframe_main: /usr/lib64/libxml2.so.2: no version information available (required by /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libXMLParser.so)
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x0000003150c98c05 in waitpid () from /lib64/libc.so.6
+#1  0x0000003150c3c481 in do_system () from /lib64/libc.so.6
+#2  0x00002b63a8df4af0 in TUnixSystem::StackTrace() () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libCore.so
+#3  0x00002b63a8df7333 in TUnixSystem::DispatchSignals(ESignals) () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libCore.so
+#4  <signal handler called>
+#5  0x00002b63ab532a23 in TProofLite::~TProofLite() () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#6  0x00002b63ab532c79 in TProofLite::~TProofLite() () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#7  0x00002b63ab542000 in TProofMgrLite::CreateSession(char const*, char const*, int) () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#8  0x00002b63ab511c3f in TProof::Open(char const*, char const*, char const*, int) () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#9  0x00002b63a8b0946b in SProofManager::Open(TString const&, TString const&) () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#10 0x00002b63a8ae8883 in SCycleController::InitProof(TString const&, int) () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#11 0x00002b63a8aefca3 in SCycleController::ExecuteNextCycle() () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#12 0x00002b63a8ae8951 in SCycleController::ExecuteAllCycles() () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#13 0x000000000040253c in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00002b63ab532a23 in TProofLite::~TProofLite() () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#6  0x00002b63ab532c79 in TProofLite::~TProofLite() () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#7  0x00002b63ab542000 in TProofMgrLite::CreateSession(char const*, char const*, int) () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#8  0x00002b63ab511c3f in TProof::Open(char const*, char const*, char const*, int) () from /uscmst1/prod/sw/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_3/external/slc5_amd64_gcc462/lib/libProof.so
+#9  0x00002b63a8b0946b in SProofManager::Open(TString const&, TString const&) () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#10 0x00002b63a8ae8883 in SCycleController::InitProof(TString const&, int) () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#11 0x00002b63a8aefca3 in SCycleController::ExecuteNextCycle() () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#12 0x00002b63a8ae8951 in SCycleController::ExecuteAllCycles() () from /uscms/home/yumiceva/work/sframe/CMSSW_5_3_3/src/SFrame/lib/libSFrameCore.so
+#13 0x000000000040253c in main ()
+===========================================================
+
+

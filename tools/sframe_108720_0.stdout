@@ -1,0 +1,7 @@
+Setting up environment for compiling/running SFrame
+ ( INFO  )  SCycleController   : Initializing
+ ( INFO  )  SCycleController   : Deleting all analysis cycle algorithms from memory
+ ( INFO  )  SCycleController   : Reading xml file: 'temp.xml'
+ ( FATAL )  sframe_main        : app/sframe_main.cxx:59 (int main(int, char**)): SError exception caught
+ ( FATAL )  sframe_main        : app/sframe_main.cxx:60 (int main(int, char**)): Message: Loading of xml document "temp.xml" failed
+ ( FATAL )  sframe_main        : app/sframe_main.cxx:61 (int main(int, char**)): --> Stopping execution
